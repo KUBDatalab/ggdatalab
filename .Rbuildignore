@@ -5,3 +5,4 @@
 ^inst/hex/.*\.png$
 ^doc$
 ^Meta$
+^LICENSE\.md$
