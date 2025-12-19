@@ -24,7 +24,7 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::pkgdown, any::htmltools
+          extra-packages: any::pkgdown, any::htmltools, local::.
           needs: website
 
       - name: Build site
