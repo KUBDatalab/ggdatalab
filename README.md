@@ -1,22 +1,36 @@
 <p align="center">
-  <img src="inst/hex/ggdatalab.png" width="200"/>
+  <img src="inst/hex/ggdatalab.png" width="200" alt="ggdatalab logo"/>
 </p>
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/kubdatalab/ggdatalab/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/kubdatalab/ggdatalab/actions/workflows/R-CMD-check.yaml)
+[![pkgdown](https://github.com/kubdatalab/ggdatalab/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/kubdatalab/ggdatalab/actions/workflows/pkgdown.yaml)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)
+<!-- badges: end -->
 
 # ggdatalab
 
-A lightweight **ggplot2 extension** providing a clean, opinionated theme and a
-coherent colour system for **discrete** and **continuous** data.
+`ggdatalab` is a small **ggplot2 extension** that provides:
 
-The package is designed to be:
-- visually consistent
-- CRAN-compliant
-- boring in the good way
+- a consistent theme (`theme_datalab()`)
+- discrete and continuous colour scales built from a fixed palette
+- simple palette helpers for reuse outside ggplot
+
+The package is written to be **R CMD check clean** and suitable for CRAN submission.
 
 ---
 
 ## Installation
 
-### From GitHub
+### CRAN
+
+When available on CRAN:
+
+```r
+install.packages("ggdatalab")
+```
+
+### Development version (GitHub)
 
 ```r
 install.packages("remotes")
@@ -45,10 +59,7 @@ ggplot(mtcars, aes(wt, mpg, colour = hp)) +
 
 - `theme_datalab()`
 
-A minimal theme based on `theme_minimal()` with:
-- restrained grid
-- clear typography
-- sensible defaults for publications and reports
+A minimal theme based on `theme_minimal()` with restrained grid lines and sensible typography defaults.
 
 ### Discrete colour scales
 
@@ -71,13 +82,11 @@ A minimal theme based on `theme_minimal()` with:
 
 ## Vignette
 
-A full introduction with examples is available as a vignette:
-
 ```r
 vignette("using-ggdatalab")
 ```
 
-Or browse all vignettes:
+Or:
 
 ```r
 browseVignettes("ggdatalab")
@@ -85,13 +94,9 @@ browseVignettes("ggdatalab")
 
 ---
 
-## Development status
+## Contributing
 
-- ✔ R CMD check (GitHub Actions)
-- ✔ Testthat tests
-- ✔ Vignette
-- ✔ pkgdown-ready
-- ✔ CRAN-check clean (local)
+Issues and pull requests are welcome. Please include a minimal reproducible example when reporting bugs.
 
 ---
 
